@@ -1,0 +1,4 @@
+1. Familiarise yourself with the HTML and JS'
+
+
+2. Style the page
