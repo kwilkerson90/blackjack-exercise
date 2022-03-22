@@ -100,7 +100,11 @@
     -use the shuffle function to shuffle the deck when you hit the deal button, but before you deal the cards   
         -need to add an event listener that waits for the click of the deal button  
         -then, use the deal function again
+<<<<<<< HEAD
+11. Calculate Points for a Hand
+=======
 11. Calulate Points for a Hand
+>>>>>>> main
     -write a calculatePoints function       
         -this function will take in an array of card objects and return the points for that hand 
             -will also need to assign point values to the cards (rank does not equal point value)
