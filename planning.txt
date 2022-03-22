@@ -125,7 +125,6 @@
     -you may also want to disable the "Deal", "Hit", and "Pass" buttons at this point 
 16. Restart the Game
     -what is involved in resetting the game?
-    -you may also want to disable the "Deal", "Hit", and "Pass" buttons at this point 
     -is there any resuable code?
     -is there a way to reset the dealer and player hands?        
     -is there a way to reset the buttons?
