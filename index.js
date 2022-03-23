@@ -25,6 +25,8 @@ function dealCard() {
 }
 // Step 5
 // Deal one more card to the player, and then another card to the dealer
+// Is there any code that is repeated? is there a way to write a function to deal from
+// the card to whichever player we chose?
 
 
 document.getElementById("hit-button").addEventListener("click", hitMe);
