@@ -53,7 +53,7 @@
             -each one of the objects in the deck will represent a card
             -each card will have a rank and a suit 
             -ex. Queen of Hearts: { rank: 12, suit: 'hearts' }
-        -we don't have to maually code a whole deck of cards; we can write a function to generate a deck of 52 cards
+        -we don't have to manually code a whole deck of cards; we can write a function to generate a deck of 52 cards
             -create a buildDeck function- this will return a new array with 52 card objects
                 -there are 4 suits; for each suit, there is a rank from 1-13
 7. Deal the Deck
