@@ -52,4 +52,32 @@ function hitMe() {
     }
 }
 
+/* Creating a deck
+ * The deck can be an array; each object in the deck will represent a card
+ * You don't have to code a whole deck of cards
+ *  You can write a function to generate a deck 
+ * buildDeck function will return an array with 52 card objects
+ * 4 sets of 13
+ * */ 
+//First, create a card object
+function card(value, name, suit) {
+    this.value = value;
+    this.name = name;
+    this.suit = suit;
+}
+//Next, make a deck object
+function deck() {
+    this.names = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]; 
+    this.suits = ["diamonds", "hearts", "spades", "clubs"];
+    const cards = [];
 
+    for(let s=0; s < this.suits.length; s++) {
+        for(let n=0; n < this.names.length; n++) {
+            cards.push(new card (n+1, this.names[n], this.suits[s]));
+        }
+    }
+    return cards;
+}
+//Then, make a new deck of cards and print it out in the console 
+const theDeck = new deck();
+console.log(theDeck);
