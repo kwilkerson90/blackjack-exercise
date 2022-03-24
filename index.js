@@ -105,6 +105,13 @@ function dealToPlayer() {
     const dealerHand = document.getElementById("dealer-hand");
     const playerHand = document.getElementById("player-hand");
     let dealerOrPlayer = "player"
+    for (let i = theDeck.length -1; i >0; i-- ) {
+        let j = Math.floor(Math.random() *i)
+        let k = theDeck[i]
+        theDeck[i] = theDeck[j]
+        theDeck[j] = k
+    }
+
     for (let index = 0; index < 4; index++) {
         let popped = theDeck.pop();
         let currentCard = document.createElement("img");
@@ -121,3 +128,14 @@ function dealToPlayer() {
         }
     }
 }
+/**
+ * Step 8
+ * Image from Cards
+ * done in conjunction with Step 7
+ * 
+ */
+
+/**
+ * Step 9
+ * 
+ */
