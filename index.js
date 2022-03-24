@@ -26,8 +26,6 @@ function dealCard() {
 */
 
 
-
-
 // Step 5
 // Deal one more card to the player, and then another card to the dealer
 // Is there any code that is repeated? is there a way to write a function to deal from
@@ -128,6 +126,7 @@ function dealToPlayer() {
         }
     }
 }
+
 /**
  * Step 8
  * Image from Cards
