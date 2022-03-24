@@ -65,7 +65,7 @@
         -you'll use these arrays later to calculate the total points for the hand
     -adjust the code so that when we click the "Deal" button, it will remove a card from the deck, 
     then place that card into the playerHand array
-        -need to add an event listener that waits fot the "Deal" button to be clicked 
+        -need to add an event listener that waits for the "Deal" button to be clicked 
         *is there an array method that allows us to remove and return an item from an array?
             *pop will remove elements from an array
             *push will add new elements to an array
@@ -100,11 +100,7 @@
     -use the shuffle function to shuffle the deck when you hit the deal button, but before you deal the cards   
         -need to add an event listener that waits for the click of the deal button  
         -then, use the deal function again
-<<<<<<< HEAD
-11. Calculate Points for a Hand
-=======
 11. Calulate Points for a Hand
->>>>>>> main
     -write a calculatePoints function       
         -this function will take in an array of card objects and return the points for that hand 
             -will also need to assign point values to the cards (rank does not equal point value)
