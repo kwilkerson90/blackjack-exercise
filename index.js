@@ -1,7 +1,7 @@
 
-// Step 4
+// Step 4- Dealing the Cards
 
-document.getElementById("deal-button").addEventListener("click", dealCard);
+/*document.getElementById("deal-button").addEventListener("click", dealCard);
 function dealCard() {
     let card = document.createElement("img");
     let dealerOrPlayer = "dealer";
@@ -23,6 +23,11 @@ function dealCard() {
         }
     }
 }
+*/
+
+
+
+
 // Step 5
 // Deal one more card to the player, and then another card to the dealer
 // Is there any code that is repeated? is there a way to write a function to deal from
@@ -35,7 +40,6 @@ function hitMe() {
     let dealerOrPlayer = "player";
     const dealer = document.getElementById("dealer-hand");
     const player = document.getElementById("player-hand");
-    card1.src = "ace_of_hearts.png";
 
     for (let index = 0; index < 2; index++) {
         const card1 = document.createElement("img");
@@ -52,7 +56,7 @@ function hitMe() {
     }
 }
 
-/* Creating a deck
+/* Step 6- Creating a deck
  * The deck can be an array; each object in the deck will represent a card
  * You don't have to code a whole deck of cards
  *  You can write a function to generate a deck 
@@ -67,7 +71,7 @@ function card(value, name, suit) {
 }
 //Next, make a deck object
 function deck() {
-    this.names = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]; 
+    this.names = ["ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king"]; 
     this.suits = ["diamonds", "hearts", "spades", "clubs"];
     const cards = [];
 
@@ -78,6 +82,42 @@ function deck() {
     }
     return cards;
 }
-//Then, make a new deck of cards and print it out in the console 
-const theDeck = new deck();
-console.log(theDeck);
+
+//Step 7- Deal the Deck
+/* Make two arrays- dealerHand, playerHand
+ * Adjust the code so that when we click the "Deal" button, it will remove a card from the deck, 
+    then place that card into the playerHand array
+ * Is there an array method that allows us to remove and return an item from an array?
+ * pop will let you remove items from an array
+ * push will let you add items to an array
+ * splice can also be used to add items to an array
+ * the card that's pulled from the deck needs to be random
+ * you can sort the deck in a random order, and then pull from there
+ * you can use the Fisher Yates method for randomizing the deck    
+ */
+
+document.getElementById("deal-button").addEventListener("click", dealToPlayer);
+function dealToPlayer() {
+    const theDeck = new deck();
+    console.log(theDeck)
+    // const playerHand = [];
+    // const dealerHand = []; 
+    const dealerHand = document.getElementById("dealer-hand");
+    const playerHand = document.getElementById("player-hand");
+    let dealerOrPlayer = "player"
+    for (let index = 0; index < 4; index++) {
+        let popped = theDeck.pop();
+        let currentCard = document.createElement("img");
+        currentCard.src = `${popped.name}_of_${popped.suit}.png`;
+        currentCard.width = 100;
+        currentCard.height = 50;
+        if (dealerOrPlayer == "player") {
+            playerHand.append(currentCard);
+        } else{
+            dealerHand.append(currentCard);
+        }
+        if (index == 1) {
+            dealerOrPlayer = "dealer";
+        }
+    }
+}
